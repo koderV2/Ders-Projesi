@@ -43,7 +43,7 @@ const notify = (msg, color = "#f1c40f") => {
 const mockFetchData = () => {
     return new Promise((resolve) => {
         notify("Loading game assets...");
-        setTimeout(() => resolve("Assets Loaded!"), 1200);
+        setTimeout(() => resolve("Assets Loaded!"), 1201);
     });
 };
 
