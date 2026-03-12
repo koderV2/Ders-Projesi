@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MainQuest</title>
+</head>
+<body style="padding: 0; margin: 0; background-image: url('background.png'); background-size: cover;">
+    <header style="background-color: black; height: 80px; padding: 0; margin: 0;" >
+          <h2 style="margin: 0cm ; color: rgb(138, 77, 28); font-size: 30px; margin-left: 5cm;">Dungeon<br>MainQuest</h2> 
+    </header>
+
+    <button id="str" type="button" onclick="start()" style="display: block; border-radius: 80px; margin: 400px; margin-left: 800px; height: 3cm; width: 5cm; background-color: rgb(80, 80, 80); color: aliceblue;">START</button>
+    <input id="nameInput" type="text" style="display: none;  margin-top: 400px; margin-left: 800px; width: 270px;" placeholder="Type your name...">
+    <button id="nameButton" type="button" onclick="nameButton()" style="display: none; margin-left: 800px;">CONFIRM</button>
+
+    <button id="character" onclick="charSelection()" style="display: none; margin-top: 1cm; margin-left: 15px; height: 4cm; width: 6cm; border-radius: 90px; background-color: rgb(107, 107, 107); color: aliceblue; ">CHOSE YOUR CHARACTER</button>
+
+    <button id="aph" type="button" onclick="charInfos('alpha'); nextButton()" style="display: none;" >  
+        <img src="Alpha.png" style="height: 6cm; width: 4cm;">
+    </button> 
+    <p3 id="alphat" style="color: aliceblue;"></p3> <br><br>
+
+    <button id="bte" type="button" onclick="charInfos('beta'); nextButton()" style="display: none;">
+        <img src="Beta.png" style="height: 6cm; width: 4cm;">
+    </button>
+    <p3 id="betat" style="color: aliceblue;"></p3> <br><br>
+
+    <button id="gma" type="button" onclick="charInfos('gama'); nextButton()" style="display: none;">
+        <img src="Gama.png" style="height: 6cm; width: 4cm;">
+    </button>
+    <p3 id="gamat" style="color: aliceblue;"></p3> <br><br>
+
+
+
+    
+    <img id="bimg" src="" style="margin-left: 10px ;">
+    <h2 id="charIh" style="color: rgb(255, 255, 255);"></h2> <br> <p2 id="charIp" style="color: rgb(255, 255, 255);"></p2>
+    <button id="nxt" type="button" onclick="nextPage(); showInventory() " style="display: none; margin-left: 450px;">NEXT</button>
+
+
+
+    <h2 id="inventoryInfo" style="display: none; margin-left: 50px; color: rgb(255, 255, 255);"></h2>
+    <p3 id="inventoryList" style="display: none; margin-left: 50px; color: rgb(255, 255, 255);"></p3> 
+    <br><br><br><br>   
+    <h2 id="yourItemInfo" style="display: none; margin-left: 50px; color: rgb(255, 255, 255);"></h2>
+    <p3 id="yourItemOne" style="display: none; margin-left: 50px; color: rgb(255, 255, 255);"></p3>
+    <p3 id="yourItemTwo" style="display: none; margin-left: 50px; color: rgb(255, 255, 255);"></p3>
+    
+
+    <input id="invInput" type="text" style="display: none; margin-left: 450px; width: 270px;" placeholder="Type the ID of the item you want to see...">
+    <button id="invButton" type="button" onclick="addButtonOne()" style="display: none; margin-left: 687px;">Add
+    </button>
+    <button id="invButtonTwo" type="button" onclick="addButtonTwo()" style="display: none; margin-left: 687px;">Add
+    </button>
+
+    <button id="nxts" type="button" onclick="lastPage()" style="display: none; margin-left: 450px;">NEXT</button>
+
+    <h3 id="playerType" style="color: aliceblue; margin-left: 1cm;"></h3>
+    <p3 id="playerName" style="color: aliceblue; margin-left: 1cm;"></p3>
+    <p3 id="readyForAdventure" style="display: none; margin-left: 10cm; color: aliceblue; font-size: 80px;">Ready for Adventure!</p3>
+    <script src="mainQuest.js"></script>
+    
+</body>
+</html>
