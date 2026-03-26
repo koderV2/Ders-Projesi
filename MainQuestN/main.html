@@ -4,39 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dungeon MainQuest</title>
+    <link rel="stylesheet" href="main.css">
 </head>
-<body style="margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background-color: #121212; color: white;">
+<body>
     
-    <header style="background-color: #000; height: 80px; display: flex; align-items: center; justify-content: center; border-bottom: 2px solid rgb(138, 77, 28);">
-        <h2 style="color: rgb(138, 77, 28); font-size: 30px; margin: 0; text-align: center;">Dungeon<br>MainQuest</h2>
+    <header class="main-header">
+        <h2 class="game-title">Dungeon<br>MainQuest</h2>
     </header>
     
-    <div id="game-container" style="text-align: center; margin-top: 50px;">
-        <div id="statusMsg" style="color: #f1c40f; font-weight: bold; margin-bottom: 20px; min-height: 24px;"></div>
+    <div id="game-container">
+        <div id="statusMsg"></div>
 
-        <button id="str" type="button" onclick="handleStart()" style="padding: 20px 60px; border-radius: 80px; cursor: pointer; background-color: #333; color: aliceblue; font-size: 22px; border: 2px solid #555;">START GAME</button>
+        <button id="str" class="btn-primary" type="button" onclick="handleStart()">START GAME</button>
 
-        <div id="nameArea" style="display: none;">
-            <input id="nameInput" type="text" style="padding: 12px; width: 300px; border-radius: 5px;" placeholder="Enter your adventurer name...">
-            <button onclick="handleNameConfirm()" style="padding: 12px 25px; cursor: pointer; background-color: rgb(138, 77, 28); color: white; border: none; border-radius: 5px;">CONFIRM</button>
+        <div id="nameArea" class="hidden">
+            <input id="nameInput" type="text" placeholder="Enter your adventurer name...">
+            <button class="btn-confirm" onclick="handleNameConfirm()">CONFIRM</button>
         </div>
 
-        <div id="selectionArea" style="display: none;">
-            <button id="characterBtn" onclick="showCharacters()" style="border-radius: 90px; padding: 15px 30px; background-color: #444; color: white; cursor: pointer;">CHOOSE YOUR CHARACTER</button>
-            <div id="charList" style="display: none; margin-top: 20px;">
-                <button onclick="handleCharSelect('alpha')" style="border-radius: 90px; padding: 10px 25px; margin: 5px;">ALPHA</button>
-                <button onclick="handleCharSelect('beta')" style="border-radius: 90px; padding: 10px 25px; margin: 5px;">BETA</button>
-                <button onclick="handleCharSelect('gama')" style="border-radius: 90px; padding: 10px 25px; margin: 5px;">GAMMA</button>
+        <div id="selectionArea" class="hidden">
+            <button id="characterBtn" class="btn-selection" onclick="showCharacters()">CHOOSE YOUR CHARACTER</button>
+            <div id="charList" class="hidden">
+                <button class="btn-char" onclick="handleCharSelect('alpha')">ALPHA</button>
+                <button class="btn-char" onclick="handleCharSelect('beta')">BETA</button>
+                <button class="btn-char" onclick="handleCharSelect('gama')">GAMMA</button>
             </div>
         </div>
 
-        <div id="skillArea" style="margin-top: 25px;"></div>
+        <div id="skillArea"></div>
 
-        <div id="infoPanel" style="margin: 40px auto; width: 60%; padding: 25px; border: 1px dashed #555; background-color: #1a1a1a; border-radius: 10px;">
-            <h3 id="charInfH" style="color: rgb(138, 77, 28);"></h3>
-            <p id="chaarInfP" style="color: #ccc;"></p>
-            <button id="nextStepBtn" onclick="goToNextLevel()" style="display: none; margin: 20px auto 0; padding: 15px 45px; background-color: #28a745; color: white; border-radius: 5px; cursor: pointer; border: none; font-weight: bold;">
-                CONFIRM & START QUEST
+        <div id="infoPanel">
+            <h3 id="charInfH"></h3>
+            <p id="chaarInfP"></p>
+            <button id="nextStepBtn" class="btn-quest" onclick="goToNextLevel()">
+                <b>CONFIRM & START QUEST</b>
             </button>
         </div>
     </div>
