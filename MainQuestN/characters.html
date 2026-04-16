@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Quest - Characters</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <style>
+        /* Karakterlere özel stiller */
+        .character-card {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .character-name {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .stat-group {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .stat {
+            background-color: #f9f9f9;
+            padding: 5px 10px;
+            border: 1px solid var(--accent-color);
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Main Quest</h1>
+        <button class="characters-btn">Characters</button>
+    </header>
+
+    <div class="main-container">
+        <nav class="sidebar">
+            <a href="game_story.html" class="sidebar-btn">Game Story</a>
+            <a href="characters.html" class="sidebar-btn active">Characters Story</a>
+            <a href="world_map.html" class="sidebar-btn">Map</a>
+            <a href="level_system.html" class="sidebar-btn">Level System</a>
+        </nav>
+
+        <main class="content-area">
+            <div class="white-panel">
+                <h2>Character Info & Lore</h2>
+
+                <div class="character-card">
+                    <div class="character-name">Alpha</div>
+                    <p>Alpha lore: The forefront warriors, often seen at the center of attention. They lead with raw strength and inspiring presence.</p>
+                    <div class="stat-group">
+                        <div class="stat">Strength: High</div>
+                        <div class="stat">Intelligence: Low</div>
+                        <div class="stat">Magic: Limited</div>
+                    </div>
+                    <p><strong>Strengths:</strong> High leadership skills, inspiring presence, master of melee combat.</p>
+                    <p><strong>Weaknesses:</strong> Often targets of enemy attention, can be impulsive, limited magical ability.</p>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-name">Beta</div>
+                    <p>Beta lore: Strategic thinkers and adapters. They utilize multiple tools and methods to solve problems and overcome threats.</p>
+                    <div class="stat-group">
+                        <div class="stat">Strength: Medium</div>
+                        <div class="stat">Intelligence: High</div>
+                        <div class="stat">Magic: Mastered</div>
+                    </div>
+                    <p><strong>Strengths:</strong> Expert tacticians, able to master multiple forms of magic and technology, excellent at finding alternate routes.</p>
+                    <p><strong>Weaknesses:</strong> Can overanalyze, lower base physical endurance, dependent on correct preparation.</p>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-name">Gamma</div>
+                    <p>Gamma lore: Resourceful and connected to the land. They harness natural resources and adapt their environment to their advantage.</p>
+                    <div class="stat-group">
+                        <div class="stat">Strength: Low</div>
+                        <div class="stat">Intelligence: Medium</div>
+                        <div class="stat">Magic: Connection to Nature</div>
+                    </div>
+                    <p><strong>Strengths:</strong> Master of resource extraction and building, strong connection to natural magic, can adapt to diverse environments.</p>
+                    <p><strong>Weaknesses:</strong> Lower direct combat capability, vulnerable without defensive structures, can get bogged down in logistics.</p>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

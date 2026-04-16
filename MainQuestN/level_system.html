@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Quest - Level System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <style>
+        /* Seviye sistemine özel stiller */
+        .xp-list {
+            margin-top: 20px;
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .xp-item {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid var(--accent-color);
+        }
+
+        .xp-source {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Main Quest</h1>
+        <button class="characters-btn">Characters</button>
+    </header>
+
+    <div class="main-container">
+        <nav class="sidebar">
+            <a href="game_story.html" class="sidebar-btn">Game Story</a>
+            <a href="characters.html" class="sidebar-btn">Characters Story</a>
+            <a href="world_map.html" class="sidebar-btn">Map</a>
+            <a href="level_system.html" class="sidebar-btn active">Level System</a>
+        </nav>
+
+        <main class="content-area">
+            <div class="white-panel">
+                <h2>Level System</h2>
+                <p>Explain how to level up: Killing enemies and creatures provides Experience Points (XP). Reach the required XP for the next level to advance.</p>
+                
+                <ul class="xp-list">
+                    <li class="xp-item">
+                        <span class="xp-source">Bosses</span>
+                        <span class="xp-value">50 - 150 XP</span>
+                    </li>
+                    <li class="xp-item">
+                        <span class="xp-source">Normal Monsters</span>
+                        <span class="xp-value">10 - 45 XP</span>
+                    </li>
+                    <li class="xp-item">
+                        <span class="xp-source">Special Creatures</span>
+                        <span class="xp-value">45 - 200 XP</span>
+                    </li>
+                </ul>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Quest - World Map</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <style>
+        /* Haritaya özel stiller */
+        .map-placeholder {
+            width: 100%;
+            height: 500px;
+            background-color: #f0f0f0;
+            border: 2px solid var(--accent-color);
+            position: relative;
+            background-image: url('https://via.placeholder.com/800x500.png?text=World+Map+Sketch'); /* Placeholder harita */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .map-legend {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+            border: 1px solid var(--accent-color);
+            padding: 10px;
+            font-size: 0.9em;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .legend-icon {
+            width: 20px;
+            height: 20px;
+            border: 1px solid var(--accent-color);
+        }
+
+        .conquered-icon {
+            background-image: repeating-linear-gradient(45deg, #ccc, #ccc 2px, transparent 2px, transparent 4px); /* Çizgili desen */
+        }
+
+        .portal-icon {
+            border-radius: 50%; /* Daire */
+            border-width: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Main Quest</h1>
+        <button class="characters-btn">Characters</button>
+    </header>
+
+    <div class="main-container">
+        <nav class="sidebar">
+            <a href="game_story.html" class="sidebar-btn">Game Story</a>
+            <a href="characters.html" class="sidebar-btn">Characters Story</a>
+            <a href="world_map.html" class="sidebar-btn active">Map</a>
+            <a href="level_system.html" class="sidebar-btn">Level System</a>
+        </nav>
+
+        <main class="content-area">
+            <div class="white-panel">
+                <h2>World Map</h2>
+                
+                <div class="map-placeholder">
+                    </div>
+
+                <div class="map-legend">
+                    <div class="legend-item">
+                        <div class="legend-icon conquered-icon"></div>
+                        <span>Conquered Regions</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-icon portal-icon"></div>
+                        <span>Dimensional Portals</span>
+                    </div>
+                </div>
+
+                <p style="margin-top: 20px; font-size: 0.9em;">Key Locations (per drawing): Ocean of Deep Waters, Kayıklı Sea, Reef Sea, Alpha Continent, Beta Continent, Gamma Continent.</p>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

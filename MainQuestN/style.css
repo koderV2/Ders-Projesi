@@ -1,0 +1,103 @@
+/* stye.css - Ortak Stiller */
+
+:root {
+    --bg-color: #1a1a1a; /* Koyu arka plan */
+    --panel-color: #ffffff; /* Beyaz kağıt paneli */
+    --text-color: #333;
+    --accent-color: #4a4a4a; /* Vurgu rengi (buton kenarlıkları vs.) */
+    --font-family: 'Handlee', cursive; /* El yazısı hissi veren yazı tipi */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--panel-color);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--accent-color);
+    position: fixed; /* Üst barı sabitleyelim */
+    top: 0;
+    width: calc(100% - 40px);
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.characters-btn {
+    background: none;
+    border: 1px solid var(--accent-color);
+    padding: 5px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: var(--font-family);
+}
+
+.main-container {
+    display: flex;
+    margin-top: 70px; /* Üst barın yüksekliği kadar boşluk */
+    flex: 1;
+}
+
+.sidebar {
+    width: 150px;
+    background-color: var(--panel-color);
+    padding: 20px 10px;
+    border-right: 2px solid var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: calc(100vh - 70px); /* Kalan ekran yüksekliği */
+    position: fixed; /* Sol menüyü sabitleyelim */
+    top: 70px;
+}
+
+.sidebar-btn {
+    background: none;
+    border: 1px solid var(--accent-color);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none; /* Linklerin altını çizme */
+    color: var(--text-color);
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family: var(--font-family);
+    display: block; /* Butonların tüm genişliği kaplamasını sağlar */
+}
+
+.sidebar-btn:hover,
+.sidebar-btn.active {
+    background-color: #f0f0f0;
+}
+
+.content-area {
+    margin-left: 170px; /* Sol menü ve boşluk */
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    justify-content: center; /* Sayfa içeriğini ortala */
+}
+
+.white-panel {
+    background-color: var(--panel-color);
+    padding: 30px;
+    width: 90%;
+    max-width: 800px; /* Çok geniş olmasın */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border: 2px solid var(--accent-color);
+}
+
